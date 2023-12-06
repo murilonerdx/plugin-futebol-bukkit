@@ -1,0 +1,68 @@
+name: futebolistico
+version: '${project.version}'
+main: org.Futebolistico
+api-version: '1.20'
+
+commands:
+  futebol:
+    description: Iniciar futebol
+    permission: futebolistico.futebol
+  create-team:
+    description: Criar um time
+    usage: /create-team <player> <TimeA | TimeB> <Color>
+    permission: futebolistico.create-team
+  setteam:
+    description: Atribui um jogador a um time
+    usage: /setteam <player> <TimeA | TimeB> <GOLEIRO | ZAGUEIRO | ATACANTE>
+  exit-team:
+    description: Sair de um time
+    usage: /exit-team
+  startgame:
+    description: Inicia o jogo com um cronômetro de 20 minutos
+    usage: /startgame <minutes>
+    permission: futebolistico.startgame
+  finishgame:
+    description: Finaliza o jogo
+    usage: /finishgame
+    permission: futebolistico.finishgame
+  punish:
+    description: Punir um jogador
+    usage: /punish <player> <type punish>
+    permission: futebolistico.punish
+  times:
+    description: Ver todos times
+    usage: /times
+    permission: futebolistico.times
+  team-game:
+    description: Setar os times que vão jogar
+    usage: /team-game <TimeA> <TimeB>
+    permission: futebolistico.team-game
+permissions:
+  futebolistico.futebol:
+    description: Permite iniciar futebol
+    default: op
+  futebolistico.create-team:
+    description: Permite criar um time
+    default: op
+  futebolistico.setteam:
+    description: Permite atribuir um jogador a um time
+    default: op
+  futebolistico.exit-team:
+    description: Permite sair de um time
+    default: op
+  futebolistico.startgame:
+    description: Permite iniciar um jogo
+    default: op
+  futebolistico.finishgame:
+    description: Permite finalizar um jogo
+    default: op
+  futebolistico.times:
+    description: Permite ver todos os times
+    default: op
+  futebolistico.team-game:
+    description: Permite setar os times para o jogo
+    default: op
+  futebolistico.punish:
+    description: Punir um jogador
+    default: op
+
